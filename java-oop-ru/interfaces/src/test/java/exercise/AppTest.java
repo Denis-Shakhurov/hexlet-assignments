@@ -58,27 +58,26 @@ class AppTest {
 
     // BEGIN
     public CharSequence text = new ReversedSequence("hexlet");
-    
+
     @Test
     void toString() {
         String expected = text.toString();
         assertThat(expected).isEqualsTo("telxeh");
     }
-    
+
     @Test
     void charAt() {
         assertThat(text.charAt(2)).isEqualsTo('l');
     }
-    
+
     @Test
     void length() {
         assertThat(text.length()).isEqualsTo(6);
     }
-    
+
     @Test
     void subSequence() {
         assertThat(text.subSequence(3, 6)).isEqualsTo("xe");
     }
-    
     // END
 }

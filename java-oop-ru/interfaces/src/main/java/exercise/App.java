@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class App {
   public static List<String> buildApartmentsList(List<Home> apartments, int n) {
         return apartments.stream()
-                .sorted(Home :: copmareTo)
+                .sorted(Home :: compareTo)
                 .limit(n)
                 .map(Home :: toString)
                 .collect(Collectors.toList());
