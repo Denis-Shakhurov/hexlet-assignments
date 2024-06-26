@@ -14,7 +14,7 @@ public class Flat implements Home {
 
     @Override
     public double getArea() {
-        return (area + balconyArea) / 2;
+        return area + balconyArea;
     }
 
     @Override
