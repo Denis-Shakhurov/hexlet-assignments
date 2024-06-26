@@ -23,7 +23,7 @@ public class ReversedSequence implements CharSequence {
     public CharSequence subSequence(int start, int end) {
         return text.substring(start, end);
     }
-    
+
     @Override
     public String toString() {
         return text;

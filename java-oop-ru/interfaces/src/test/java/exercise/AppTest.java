@@ -62,22 +62,22 @@ class AppTest {
     @Test
     void toString() {
         String expected = text.toString();
-        assertThat(expected).isEqualsTo("telxeh");
+        assertThat(expected).isEqualTo("telxeh");
     }
 
     @Test
     void charAt() {
-        assertThat(text.charAt(2)).isEqualsTo('l');
+        assertThat(text.charAt(2)).isEqualTo('l');
     }
 
     @Test
     void length() {
-        assertThat(text.length()).isEqualsTo(6);
+        assertThat(text.length()).isEqualTo(6);
     }
 
     @Test
     void subSequence() {
-        assertThat(text.subSequence(3, 6)).isEqualsTo("xe");
+        assertThat(text.subSequence(3, 6)).isEqualTo("xe");
     }
     // END
 }
