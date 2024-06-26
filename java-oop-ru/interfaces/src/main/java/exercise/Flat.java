@@ -34,7 +34,7 @@ public class Flat implements Home {
                 + getArea()
                 + " метров на "
                 + floor
-                + " этаже.";
+                + " этаже";
     }
 }
 // END

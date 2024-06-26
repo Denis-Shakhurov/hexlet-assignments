@@ -77,7 +77,7 @@ class AppTest {
 
     @Test
     void testSubSequence() {
-        assertThat(text.subSequence(3, 6)).isEqualTo("xe");
+        assertThat(text.subSequence(3, 6)).isEqualTo("xeh");
     }
     // END
 }
