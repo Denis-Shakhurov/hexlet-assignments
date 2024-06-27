@@ -36,7 +36,7 @@ public class InMemoryKV implements KeyValueStorage {
 
     @Override
     public Map<String, String> toMap() {
-        return map;
+        return Map.copyOf(map);
     }
 }
 // END
