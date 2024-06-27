@@ -8,6 +8,8 @@ public class FileKV implements KeyValueStorage {
     private Map<String, String> map;
 
     public FileKV(String path, Map<String, String> map) {
+        String json = Utils.serialize(map);
+        Utils.writeFile(path, json);
         this.path = path;
         this.map = map;
     }
@@ -16,7 +18,11 @@ public class FileKV implements KeyValueStorage {
     public void set(String key, String value) {
         String content = Utils.readFile(path);
         Map<String, String> tempMap = Utils.unserialize(content);
-        tempMap.put(key, value);
+        if (tempMap.containsKey(key)) {
+            tempMap.remove(key, value);
+        } else {
+            tempMap.put(key, value);
+        }
         map = tempMap;
         String json = Utils.serialize(map);
         Utils.writeFile(path, json);
