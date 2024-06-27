@@ -18,11 +18,7 @@ public class FileKV implements KeyValueStorage {
     public void set(String key, String value) {
         String content = Utils.readFile(path);
         Map<String, String> tempMap = Utils.unserialize(content);
-        if (tempMap.containsKey(key)) {
-            tempMap.remove(key, value);
-        } else {
-            tempMap.put(key, value);
-        }
+        tempMap.put(key, value);
         map = tempMap;
         String json = Utils.serialize(map);
         Utils.writeFile(path, json);
