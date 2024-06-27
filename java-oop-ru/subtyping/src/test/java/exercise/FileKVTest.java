@@ -1,6 +1,7 @@
 package exercise;
 
 import java.util.HashMap;
+import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import java.nio.file.Files;
 import java.nio.file.Paths;
