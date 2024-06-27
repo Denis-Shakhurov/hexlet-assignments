@@ -15,7 +15,7 @@ public class InMemoryKV implements KeyValueStorage {
     public void set(String key, String value) {
         Map<String, String> tempMap = new HashMap<>(map);
         tempMap.put(key, value);
-        map = tempMap;
+        map = Map.copyOf(tempMap);
     }
 
     @Override
