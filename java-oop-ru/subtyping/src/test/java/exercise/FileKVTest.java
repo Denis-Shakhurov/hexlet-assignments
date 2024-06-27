@@ -27,7 +27,7 @@ class FileKVTest {
     // BEGIN
     @Test
     void inFileKVTest() {
-        KeyValueStorage storage = new FileKV(filePath.toString(), Map.of("key", "10"));
+        KeyValueStorage storage = new FileKV(filepath.toString(), Map.of("key", "10"));
         assertThat(storage.get("key2", "default")).isEqualTo("default");
         assertThat(storage.get("key", "default")).isEqualTo("10");
 
