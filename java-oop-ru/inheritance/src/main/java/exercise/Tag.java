@@ -24,10 +24,10 @@ public class Tag {
     @Override
     public String toString() {
         String mapToString = map.keySet().stream()
-                .map(key-> key + "=\"" + map.get(key) + "\" ")
-                .collect(Collectors.joining()).trim();
+                .map(key -> " " + key + "=\"" + map.get(key) + "\"")
+                .collect(Collectors.joining());
 
-        return String.format("<%s %s>", getName(), mapToString);
+        return String.format("<%s%s>", getName(), mapToString);
     }
 }
 // END
