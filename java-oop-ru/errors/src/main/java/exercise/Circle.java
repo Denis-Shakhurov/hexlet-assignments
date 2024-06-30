@@ -16,7 +16,7 @@ public class Circle {
 
     public double getSquare() throws NegativeRadiusException {
         if (radius < 0) {
-            throw new NegativeRadiusException();
+            throw new NegativeRadiusException("Радиус не может быть меньше 0");
         }
         return Math.PI * radius * radius;
     }
