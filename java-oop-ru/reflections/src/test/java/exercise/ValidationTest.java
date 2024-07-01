@@ -41,9 +41,9 @@ class ValidationTest {
                 "city", List.of("length less than 3"));
         assertThat(result2).isEqualTo(expected2);
         
-        Address address3 = new Address("Russia", "Tomsk", "Ivanovskogo", null, "1");
+        Address address3 = new Address("Russia", "Tomsk", "Iva", null, "1");
         Map<String, List<String>> result3 = Validator.advancedValidate(address3);
-        Map<String, List<String>> expected3 = Map.of("street", List.of("length less than 12"),
+        Map<String, List<String>> expected3 = Map.of("street", List.of("length less than 4"),
                 "houseNumber", List.of("can not be null"));
         assertThat(result3).isEqualTo(expected3);
     }
