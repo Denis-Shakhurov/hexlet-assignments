@@ -3,6 +3,7 @@ package exercise;
 import lombok.Value;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import java.io.IOException;
 
 // BEGIN
 @Value
@@ -31,7 +32,7 @@ class Car {
         Car car = null;
         try {
             car = mapper.readValue(json, Car.class);
-        } catch (JsonProcessingException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
         return car;
