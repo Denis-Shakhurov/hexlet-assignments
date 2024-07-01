@@ -5,7 +5,7 @@ class Address {
     @NotNull
     // END
     private String country;
-    @NotNull
+    
     // BEGIN
     @NotNull
     // END
