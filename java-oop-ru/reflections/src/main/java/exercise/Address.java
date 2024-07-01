@@ -8,11 +8,13 @@ class Address {
 
     // BEGIN
     @NotNull
+    @MinLength()
     // END
     private String city;
 
     // BEGIN
     @NotNull
+    @MinLength(minLength = 12)
     // END
     private String street;
 
