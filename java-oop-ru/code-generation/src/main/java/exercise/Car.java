@@ -2,6 +2,7 @@ package exercise;
 
 import lombok.Value;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 // BEGIN
 @Value
@@ -14,7 +15,7 @@ class Car {
     User owner;
 
     // BEGIN
-    public static String serialize(Car car){
+    public static String serialize(Car car) {
         ObjectMapper mapper = new ObjectMapper();
         String json = "";
         try {
