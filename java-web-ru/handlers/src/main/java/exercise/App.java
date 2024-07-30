@@ -7,11 +7,11 @@ public final class App {
     public static Javalin getApp() {
 
         // BEGIN
-        var app = Javelin.create(config -> {
-        config.bundleadPlugins.enableDevLogging();
+        var app = Javalin.create(config -> {
+        config.bundledPlugins.enableDevLogging();
         });
-        app.get("/phones", ctx -> ctx.writeJsonStream(Data.getPhones());
-        app.get("/domains", ctx -> ctx.writeJsonStream(Data.getDomains());
+        app.get("/phones", ctx -> ctx.writeJsonStream(Data.getPhones().stream()));
+        app.get("/domains", ctx -> ctx.writeJsonStream(Data.getDomains().stream()));
         return app;
         // END
     }
