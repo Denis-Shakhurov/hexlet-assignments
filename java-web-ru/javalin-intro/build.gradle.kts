@@ -23,6 +23,7 @@ dependencies {
     
     // END
     implementation("org.slf4j:slf4j-simple:2.0.7")
+    implementation("io.javalin:javalin-rendering:6.1.3")
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("com.konghq:unirest-java:3.13.0")
