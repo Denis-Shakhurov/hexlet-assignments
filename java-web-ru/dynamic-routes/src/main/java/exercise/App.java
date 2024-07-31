@@ -3,6 +3,7 @@ package exercise;
 import io.javalin.Javalin;
 import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
 
 // BEGIN
 import io.javalin.http.NotFoundResponse;
@@ -20,7 +21,7 @@ public final class App {
 
         // BEGIN
         app.get("/companies/{id}", ctx -> {
-        var id = ctx.queryParamAsClass("id", String.class).get();
+        var id = ctx.pathParam("id");
         var companie = COMPANIES.stream()
                     .filter(map -> map.get("id").equals(id))
                     .findFirst()
