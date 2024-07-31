@@ -6,6 +6,7 @@ import java.util.Map;
 
 // BEGIN
 import io.javalin.http.NotFoundResponse;
+import io.javalin.http.HttpStatus;
 // END
 
 public final class App {
@@ -22,9 +23,9 @@ public final class App {
         app.get("/companies/{id}", ctx -> {
         var id = ctx.pathParam("id");
         var companie = COMPANIES.stream()
-                        .filter(map -> map.get("id").equals(id))
-                        .findFirst()
-                        .orElseThrow(() -> new NotFoundResponse("Company not found."));
+                                .filter(map -> map.get("id").equals(id))
+                                .findFirst()
+                                .orElseThrow(() -> new NotFoundResponse("Company not found"));
         ctx.json(companie);
         });
         // END
