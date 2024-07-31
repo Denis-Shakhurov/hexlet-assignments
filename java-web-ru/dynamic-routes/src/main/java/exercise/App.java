@@ -20,11 +20,11 @@ public final class App {
 
         // BEGIN
         app.get("/companies/{id}", ctx -> {
-        var id = ctx.queryParamAsClass("id", Integer.class).get();
+        var id = ctx.queryParamAsClass("id", String.class).get();
         var companie = COMPANIES.stream()
-                      .filter(map -> map.get("id").equals(id))
-                      .findFirst()
-                      .orElseThrow(() -> new NotFoundResponse("Company not found."));
+                    .filter(map -> map.get("id").equals(id))
+                    .findFirst()
+                    .orElseThrow(() -> new NotFoundResponse("Company not found."));
         ctx.json(companie);
         });
         // END
