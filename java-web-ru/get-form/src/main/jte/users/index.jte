@@ -4,12 +4,7 @@
 @template.layout.page(
 content = @`
     <h1>Пользователи</h1>
-	@if(page.getTerm() == null)
-	<form action="/users" method="get">
-		<input type="search" required name="term">
-		<input type="submit" value="Искать">
-	</form>
-	@else
+	
 	<form action="/users" method="get">
 		<input type="search" required name="term" value="${page.getTerm()}">
 		<input type="submit" value="Искать">
@@ -31,6 +26,6 @@ content = @`
     					</tr>
     				</tbody>
             @endfor
-	@endif
+	
 `
 )
