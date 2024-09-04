@@ -44,7 +44,6 @@ public class SecurityConfig {
         return http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        // Разрешаем доступ только к /api/login, чтобы аутентифицироваться и получить токен
                         .requestMatchers(HttpMethod.POST, "/users").permitAll()
                         .requestMatchers("/login").permitAll()
                         .anyRequest().authenticated())
